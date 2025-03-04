@@ -1,6 +1,5 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Login from './components/Login';
 import Connexion from './pages/Connexion';
 import Posts from './pages/Posts';
 import { AuthProvider } from './AuthContext';

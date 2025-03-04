@@ -5,6 +5,11 @@ export const CartePost = ({id, owner, content, parent, createAt, likes}) => {
     return (
         <section className="carte">
             <div className="entete">
+                if ({owner}) {
+
+                } else {
+                    
+                }
                 <div>{owner}</div>
                 <div>{createAt}</div>
             </div>

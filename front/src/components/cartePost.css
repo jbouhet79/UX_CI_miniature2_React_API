@@ -38,7 +38,7 @@
     padding-top: 0.5rem;
     padding-right: 5rem;
     padding-left: 5rem;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 }
 
 .contenu {
@@ -53,5 +53,5 @@
     justify-content: space-between; /* Écarte les éléments */
     padding-right: 5rem;
     padding-left: 5rem;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 }
