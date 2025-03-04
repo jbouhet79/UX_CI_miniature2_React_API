@@ -1,0 +1,13 @@
+.pagePosts {
+    background-color: rgb(65, 65, 65);
+    /* flex: 1; */
+    /* align-items: start; */
+    min-height: 100vh; /* Permet au background de couvrir toute la hauteur */
+    display: flex;
+    flex-direction: column; /* Organise les éléments en colonne */
+    justify-content: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+    color: white;
+}
+
