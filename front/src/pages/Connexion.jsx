@@ -21,7 +21,7 @@ const Connexion = ({ className, onSubmit }) => {
         }
     }
 
-    const handleSubmit = async (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
         try {
             const response = await axios.post('http://localhost:8080/api/auth/login', {
@@ -38,9 +38,28 @@ const Connexion = ({ className, onSubmit }) => {
         }
     }
 
+    const handleRegister = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post("http://localhost:8080/api/auth/register", {
+                username: userName,
+                password: password
+            });
+            console.log("Compte créé:", response.data);
+            alert("Compte créé avec succès ! Vous pouvez maintenant vous connecter.");
+
+            // vider les champs
+            setUsername("");
+            setPassword("");
+
+        } catch (error) {
+            setError("Erreur lors de la création du compte");
+        }
+    };
+
     return (
 
-        <form onSubmit={handleSubmit} className="pageConnexion">
+        <form className="pageConnexion">
             <div>
                 <label>
                     Nom : 
@@ -69,7 +88,10 @@ const Connexion = ({ className, onSubmit }) => {
             </div>
             {error && <div className="error">{error}</div>}
             <div>
-                <button className='bouton' type="submit">Login</button>
+                <button className='bouton' type="submit" onClick={handleLogin}>Se connecter</button>
+            </div>
+            <div>
+                <button className='bouton' type="button" onClick={handleRegister}>Créer un compte</button>
             </div>
         </form>
     )

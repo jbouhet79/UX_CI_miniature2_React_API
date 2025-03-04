@@ -16,7 +16,7 @@ function App() {
       {/* <Login className="login"/> */}
       <AuthProvider>
         <Routes>
-          <Route path='/connexion' element={<Connexion />}></Route>
+          <Route path='/' element={<Connexion />}></Route>
           <Route path='/posts' element={<Posts />}></Route>
         </Routes>
       </AuthProvider>
